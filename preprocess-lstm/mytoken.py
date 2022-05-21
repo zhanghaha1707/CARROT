@@ -13,8 +13,8 @@ import pycparser
 import tqdm
 import re
     
-def unzip(file="../data/oj.tar.gz", dir="./tmp",
-          done_file="unzip.done"):
+def unzip(file="../data/oj.tar.gz", dir="./tmp",done_file="unzip.done"):
+
     
     if os.path.isdir(dir):
         if not os.path.isfile(os.path.join(dir, done_file)):

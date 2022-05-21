@@ -1,17 +1,11 @@
 '''
-Author: “zhanghaha1707” zhangyuixn@163.com
+Author: Zhang
 Date: 2022-05-21 09:50:59
-LastEditors: “zhanghaha1707” zhangyuixn@163.com
-LastEditTime: 2022-05-21 10:11:31
+LastEditTime: 2022-05-21 11:39:21
 FilePath: /CARROT_/preprocess-lstm/main.py
-Description: 这是默认设置,请设置`customMade`, 打开koroFileHeader查看配置 进行设置: https://github.com/OBKoro1/koro1FileHeader/wiki/%E9%85%8D%E7%BD%AE
-'''
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Mar  3 17:57:54 2020
+Description: 
 
-@author: DrLC
-"""
+'''
 
 import shutil
 import os, sys
@@ -21,16 +15,13 @@ import build_dataset as bd
 from pattern import StmtInsPos, DeclInsPos
 from tqdm import tqdm
 
-def dataset(dir = './tmp', tgt = '../data/oj.pkl.gz',
-            symtab = '../data/oj_uid.pkl.gz', 
-            inspos_file = '../data/oj_inspos.pkl.gz',
-            done_file = 'dataset.done'):
-    """处理数据集的函数
-    
-    args:
-        dir:暂时存放中间数据的位置
-        tgt:
-    """
+def dataset(
+    dir = './tmp', 
+    tgt = '../data/oj.pkl.gz',
+    symtab = '../data/oj_uid.pkl.gz', 
+    inspos_file = '../data/oj_inspos.pkl.gz',
+    done_file = 'dataset.done'
+    ):
     if tk.unzip():
         d = tk.tokenize()
         if d is not None:
